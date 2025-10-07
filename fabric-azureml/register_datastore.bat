@@ -83,15 +83,15 @@ if %ERRORLEVEL% EQU 0 (
     echo ========================================
     echo.
     echo Datastore Details:
-    echo   Name: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388
+    echo   Name: "<REDACTED_WORKSPACE_ID>"
     echo   Type: OneLake (Fabric)
-    echo   Workspace ID: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388
-    echo   Lakehouse ID: b5607519-ec4b-4a83-ac2a-5443c8887e2a
+    echo   Workspace ID: "<REDACTED_WORKSPACE_ID>"
+    echo   Lakehouse ID: "<REDACTED_LAKEHOUSE_ID>"
     echo.
     echo Next Steps:
     echo   1. Verify in Azure ML Studio: https://ml.azure.com
     echo   2. Navigate to Data ^> Datastores
-    echo   3. Look for: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388
+    echo   3. Look for: "<REDACTED_WORKSPACE_ID>"
     echo.
     
     REM List all datastores

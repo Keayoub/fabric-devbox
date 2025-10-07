@@ -4,6 +4,17 @@
 
 A short, practical guide with copy-paste examples for reading from and writing to OneLake from Azure Machine Learning (or from local/dev environments). It focuses on two common patterns, authentication, encoding pitfalls, networking (OAP), and a tiny checklist to help you get started quickly.
 
+## Working examples
+
+Ready-to-run code and registration helpers are in the [`fabric-azureml/`](../fabric-azureml/) folder:
+
+- **[access_onelake_azureml.ipynb](../fabric-azureml/access_onelake_azureml.ipynb)** — full notebook with auth chain (Managed Identity → Azure CLI → service principal), read/write examples, encoding fallbacks, and diagnostics. Works on Azure ML compute or locally.
+- **[register_onelake_datastore.py](../fabric-azureml/register_onelake_datastore.py)** — Python script to register OneLake as an Azure ML datastore.
+- **[register-with-cli.ps1](../fabric-azureml/register-with-cli.ps1)** — PowerShell wrapper for quick CLI-based registration.
+- **[register-with-cli.cmd](../fabric-azureml/register-with-cli.cmd)** — Batch file alternative for Windows.
+
+All scripts support service principal and managed identity auth. Check [`fabric-azureml/README.md`](../fabric-azureml/README.md) for setup steps.
+
 ## TL;DR (answer in 30 seconds)
 
 - Two common patterns:

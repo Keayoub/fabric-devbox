@@ -29,14 +29,14 @@ def register_onelake_datastore():
     )
     
     # OneLake configuration from your YAML file
-    workspace_id = "fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
-    lakehouse_id = "b5607519-ec4b-4a83-ac2a-5443c8887e2a"
+    workspace_id = "<REDACTED_WORKSPACE_ID>"
+    lakehouse_id = "<REDACTED_LAKEHOUSE_ID>"
     
     # Service Principal credentials
     # SECURITY NOTE: Consider moving these to Azure Key Vault
-    tenant_id = "c869cf92-11d8-4fbc-a7cf-6114d160dd71"
-    client_id = "f4b66b80-24d3-4498-9cdf-02f47c776315"
-    client_secret = os.getenv("ONELAKE_CLIENT_SECRET", "Pn28Q~Rz~IMklN-wBXYE-IfVwJWfLQbhpDOLoaOW")
+    tenant_id = "<REDACTED_TENANT_ID>"
+    client_id = "<REDACTED_SP_CLIENT_ID>"
+    client_secret = os.getenv("ONELAKE_CLIENT_SECRET", "<REDACTED_CLIENT_SECRET>")
     
     # Create OneLake Datastore
     print("📦 Creating OneLake datastore configuration...")

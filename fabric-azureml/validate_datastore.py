@@ -80,7 +80,7 @@ def validate_datastore():
         return False
     
     # Check if datastore exists
-    datastore_name = "fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
+    datastore_name = "<REDACTED_WORKSPACE_ID>"
     print(f"🔍 Checking for datastore: {datastore_name}...")
     
     try:
@@ -162,7 +162,7 @@ def test_data_reference():
     print("=" * 70)
     
     try:
-        datastore_name = "fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
+    datastore_name = "<REDACTED_WORKSPACE_ID>"
         
         # Create a data reference
         data_path = f"azureml://datastores/{datastore_name}/paths/your-data-path/"

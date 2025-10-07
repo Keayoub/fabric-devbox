@@ -211,15 +211,15 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "==============================================================================" -ForegroundColor Green
     Write-Host ""
     Write-Host "Datastore Details:" -ForegroundColor Cyan
-    Write-Host "  Name: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
+    Write-Host "  Name: '<REDACTED_WORKSPACE_ID>'"
     Write-Host "  Type: OneLake (Microsoft Fabric)"
-    Write-Host "  Workspace ID: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
-    Write-Host "  Lakehouse ID: b5607519-ec4b-4a83-ac2a-5443c8887e2a"
+    Write-Host "  Workspace ID: '<REDACTED_WORKSPACE_ID>'"
+    Write-Host "  Lakehouse ID: '<REDACTED_LAKEHOUSE_ID>'"
     Write-Host ""
     Write-Host "Next Steps:" -ForegroundColor Yellow
     Write-Host "  1. View in Azure ML Studio: https://ml.azure.com"
     Write-Host "  2. Navigate to: Data > Datastores"
-    Write-Host "  3. Look for: fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388"
+    Write-Host "  3. Look for: '<REDACTED_WORKSPACE_ID>'"
     Write-Host ""
     
     # Show the registered datastore
@@ -228,10 +228,10 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "==============================================================================" -ForegroundColor Cyan
     Write-Host ""
     
-    az ml datastore show `
-      --name fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388 `
-      --resource-group $ResourceGroup `
-      --workspace-name $WorkspaceName
+            az ml datastore show `
+                --name "<REDACTED_WORKSPACE_ID>" `
+            --resource-group $ResourceGroup `
+            --workspace-name $WorkspaceName
     
     Write-Host ""
     Write-Host "==============================================================================" -ForegroundColor Cyan

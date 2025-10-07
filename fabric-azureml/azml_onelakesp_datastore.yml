@@ -1,0 +1,15 @@
+# fb53fbfb-d8e9-4797-b2f5-ba80bb9a7388/lakehouses/b5607519-ec4b-4a83-ac2a-5443c8887e2a?experience=fabric-developer
+# my_onelakesp_datastore.yml
+$schema: http://azureml/sdk-2-0/OneLakeDatastore.json
+name: onelakesp_datastore
+type: one_lake
+description: Credential-less datastore pointing to a OneLake lakehouse.
+one_lake_workspace_name: "<your_workspace_id>"
+endpoint: "msit-onelake.dfs.fabric.microsoft.com"
+artifact:
+  type: lake_house
+  name: "<your_lakehouse_id>/Files"
+credentials:
+  tenant_id: <your_tenant_id>
+  client_id: <your_client_id>
+  client_secret: <your_client_secret>
