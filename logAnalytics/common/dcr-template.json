@@ -1,0 +1,257 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "dcrName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "dceResourceId": {
+      "type": "string"
+    },
+    "lawResourceId": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Insights/dataCollectionRules",
+      "apiVersion": "2022-06-01",
+      "name": "[parameters('dcrName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "dataCollectionEndpointId": "[parameters('dceResourceId')]",
+        "description": "Fabric comprehensive monitoring telemetry collector",
+        "streamDeclarations": {
+          "Custom-FabricPipelineRun_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "ItemId", "type": "string" },
+              { "name": "ItemType", "type": "string" },
+              { "name": "RunId", "type": "string" },
+              { "name": "JobType", "type": "string" },
+              { "name": "InvokeType", "type": "string" },
+              { "name": "Status", "type": "string" },
+              { "name": "StartTimeUtc", "type": "datetime" },
+              { "name": "EndTimeUtc", "type": "datetime" },
+              { "name": "DurationMs", "type": "long" },
+              { "name": "FailureCode", "type": "string" },
+              { "name": "FailureMessage", "type": "string" }
+            ]
+          },
+          "Custom-FabricPipelineActivityRun_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "PipelineName", "type": "string" },
+              { "name": "ActivityName", "type": "string" },
+              { "name": "ActivityType", "type": "string" },
+              { "name": "RunId", "type": "string" },
+              { "name": "Status", "type": "string" },
+              { "name": "StartTimeUtc", "type": "datetime" },
+              { "name": "EndTimeUtc", "type": "datetime" },
+              { "name": "DurationMs", "type": "long" },
+              { "name": "RowsRead", "type": "long" },
+              { "name": "RowsWritten", "type": "long" },
+              { "name": "ErrorCode", "type": "string" },
+              { "name": "ErrorMessage", "type": "string" }
+            ]
+          },
+          "Custom-FabricDataflowRun_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "DataflowId", "type": "string" },
+              { "name": "RunId", "type": "string" },
+              { "name": "Status", "type": "string" },
+              { "name": "StartTimeUtc", "type": "datetime" },
+              { "name": "EndTimeUtc", "type": "datetime" },
+              { "name": "DurationMs", "type": "long" },
+              { "name": "ErrorMessage", "type": "string" }
+            ]
+          },
+          "Custom-FabricUserActivity_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "UserId", "type": "string" },
+              { "name": "UserEmail", "type": "string" },
+              { "name": "Activity", "type": "string" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "ItemId", "type": "string" },
+              { "name": "ItemName", "type": "string" },
+              { "name": "ItemType", "type": "string" },
+              { "name": "OperationName", "type": "string" },
+              { "name": "ActivityId", "type": "string" }
+            ]
+          },
+          "Custom-FabricDatasetRefresh_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "DatasetId", "type": "string" },
+              { "name": "DatasetName", "type": "string" },
+              { "name": "RefreshId", "type": "string" },
+              { "name": "RefreshType", "type": "string" },
+              { "name": "Status", "type": "string" },
+              { "name": "StartTime", "type": "datetime" },
+              { "name": "EndTime", "type": "datetime" },
+              { "name": "DurationMs", "type": "long" },
+              { "name": "ServicePrincipalId", "type": "string" },
+              { "name": "ErrorCode", "type": "string" },
+              { "name": "ErrorMessage", "type": "string" },
+              { "name": "RequestId", "type": "string" }
+            ]
+          },
+          "Custom-FabricDatasetMetadata_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "DatasetId", "type": "string" },
+              { "name": "DatasetName", "type": "string" },
+              { "name": "Description", "type": "string" },
+              { "name": "ConfiguredBy", "type": "string" },
+              { "name": "CreatedDate", "type": "datetime" },
+              { "name": "ModifiedDate", "type": "datetime" },
+              { "name": "ContentProviderType", "type": "string" },
+              { "name": "DatasourceType", "type": "string" },
+              { "name": "IsOnPremGatewayRequired", "type": "boolean" },
+              { "name": "IsRefreshable", "type": "boolean" },
+              { "name": "AddRowsAPIEnabled", "type": "boolean" }
+            ]
+          },
+          "Custom-FabricCapacityMetrics_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "CapacityId", "type": "string" },
+              { "name": "CapacityName", "type": "string" },
+              { "name": "CapacityType", "type": "string" },
+              { "name": "CapacitySku", "type": "string" },
+              { "name": "Region", "type": "string" },
+              { "name": "State", "type": "string" },
+              { "name": "WorkspaceCount", "type": "int" },
+              { "name": "MonitoringMethod", "type": "string" }
+            ]
+          },
+          "Custom-FabricCapacityWorkloads_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "CapacityId", "type": "string" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "WorkspaceName", "type": "string" },
+              { "name": "WorkloadType", "type": "string" },
+              { "name": "ItemId", "type": "string" },
+              { "name": "ItemName", "type": "string" },
+              { "name": "ItemDescription", "type": "string" },
+              { "name": "State", "type": "string" }
+            ]
+          },
+          "Custom-FabricWorkspaceEvents_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "EventType", "type": "string" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "WorkspaceName", "type": "string" },
+              { "name": "WorkspaceType", "type": "string" },
+              { "name": "CapacityId", "type": "string" },
+              { "name": "ItemCount", "type": "int" },
+              { "name": "ItemTypes", "type": "string" },
+              { "name": "IsOnDedicatedCapacity", "type": "boolean" }
+            ]
+          },
+          "Custom-FabricItemDetails_CL": {
+            "columns": [
+              { "name": "TimeGenerated", "type": "datetime" },
+              { "name": "WorkspaceId", "type": "string" },
+              { "name": "WorkspaceName", "type": "string" },
+              { "name": "CapacityId", "type": "string" },
+              { "name": "ItemId", "type": "string" },
+              { "name": "ItemName", "type": "string" },
+              { "name": "ItemType", "type": "string" },
+              { "name": "ItemDescription", "type": "string" },
+              { "name": "IsOnDedicatedCapacity", "type": "boolean" }
+            ]
+          }
+        },
+        "destinations": {
+          "logAnalytics": [
+            {
+              "workspaceResourceId": "[parameters('lawResourceId')]",
+              "name": "laDest"
+            }
+          ]
+        },
+        "dataFlows": [
+          {
+            "streams": ["Custom-FabricPipelineRun_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricPipelineRun_CL"
+          },
+          {
+            "streams": ["Custom-FabricPipelineActivityRun_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricPipelineActivityRun_CL"
+          },
+          {
+            "streams": ["Custom-FabricDataflowRun_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricDataflowRun_CL"
+          },
+          {
+            "streams": ["Custom-FabricUserActivity_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricUserActivity_CL"
+          },
+          {
+            "streams": ["Custom-FabricDatasetRefresh_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricDatasetRefresh_CL"
+          },
+          {
+            "streams": ["Custom-FabricDatasetMetadata_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricDatasetMetadata_CL"
+          },
+          {
+            "streams": ["Custom-FabricCapacityMetrics_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricCapacityMetrics_CL"
+          },
+          {
+            "streams": ["Custom-FabricCapacityWorkloads_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricCapacityWorkloads_CL"
+          },
+          {
+            "streams": ["Custom-FabricWorkspaceEvents_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricWorkspaceEvents_CL"
+          },
+          {
+            "streams": ["Custom-FabricItemDetails_CL"],
+            "destinations": ["laDest"],
+            "transformKql": "source",
+            "outputStream": "Custom-FabricItemDetails_CL"
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {
+    "dcrImmutableId": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Insights/dataCollectionRules', parameters('dcrName'))).immutableId]"
+    }
+  }
+}

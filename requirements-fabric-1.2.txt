@@ -1,0 +1,35 @@
+# Fabric Runtime 1.2 Compatible Packages
+# Azure SDK packages
+azure-identity>=1.15.0,<2.0.0
+azure-keyvault-secrets>=4.7.0,<5.0.0
+azure-monitor-ingestion>=1.0.3,<2.0.0
+azure-mgmt-loganalytics>=12.0.0,<14.0.0
+azure-mgmt-resource>=23.0.0,<24.0.0
+
+# Microsoft Authentication
+msal>=1.24.0,<2.0.0
+
+# Core packages (compatible with Fabric Runtime 1.2)
+requests>=2.31.0,<3.0.0
+pandas>=1.5.3,<2.1.0
+numpy>=1.24.3,<1.26.0
+pyarrow>=12.0.0,<13.0.0
+
+# Data processing
+json5>=0.9.0
+python-dotenv>=1.0.0
+
+# Development tools
+jupyter>=1.0.0
+ipykernel>=6.25.0
+rich>=13.5.0
+
+# Fabric specific packages for 1.2
+# Note: semantic-link-sempy and notebookutils are only available in Fabric runtime
+# semantic-link-sempy>=0.7.0,<1.0.0
+# notebookutils>=1.4.4,<2.0.0
+
+# Optional data science packages (1.2 compatible versions)
+matplotlib>=3.7.0,<3.8.0
+seaborn>=0.12.0,<0.13.0
+plotly>=5.15.0,<6.0.0

@@ -1,0 +1,7 @@
+location,subpath,connectionId,workspace,lakehouse,target,shortcutName
+https://datademoaccount.dfs.core.windows.net/,sources/Sample1,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample1,myshortcut1
+https://datademoaccount.dfs.core.windows.net/,sources/Sample2,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample2,myshortcut2
+https://datademoaccount.dfs.core.windows.net/,sources/Sample3,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample3,myshortcut3
+https://datademoaccount.dfs.core.windows.net/,sources/Sample1,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample1,myshortcut4
+https://datademoaccount.dfs.core.windows.net/,sources/Sample2,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample2,myshortcut5
+https://datademoaccount.dfs.core.windows.net/,sources/Sample3,720a9c4e-3496-4c5e-9938-27997c6b0a79,Sample-Shorchuts,Samples,Shortcuts/Sample3,myshortcut6

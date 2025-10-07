@@ -1,0 +1,9 @@
+{
+  "lawId": {
+    "value": "/subscriptions/c7b690b3-d9ad-4ed0-9942-4e7a36d0c187/resourceGroups/Fabric-Demos/providers/Microsoft.OperationalInsights/workspaces/fabriclogsdata"
+  },
+  "location": { "value": "westus3" },
+  "dceName": { "value": "fabric-logs-dce" },
+  "dcrName": { "value": "fabric-logs-dcr" }
+}
+

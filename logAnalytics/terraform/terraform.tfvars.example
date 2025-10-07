@@ -1,0 +1,20 @@
+# Terraform Variables Configuration File
+# Copy this file to terraform.tfvars and customize the values
+
+# Required: Service Principal Configuration
+# Get your service principal object ID from:
+# Azure Portal: Azure AD > Enterprise Applications > your SP > Object ID
+# Azure CLI: az ad sp show --id "your-client-id" --query "id" -o tsv
+service_principal_object_id = "12345678-1234-1234-1234-123456789abc"
+
+# Optional: Azure Location and Resource Naming
+location                      = "East US"
+resource_group_name          = "rg-fabric-monitoring"
+log_analytics_workspace_name = "law-fabric-monitoring"
+data_collection_endpoint_name = "dce-fabric-monitoring"
+data_collection_rule_name    = "dcr-fabric-monitoring"
+
+# Example values:
+# location = "Canada Central"  # Default in main.tf
+# resource_group_name = "fabric-loganalytics-rg"  # Default in main.tf
+# log_analytics_workspace_name = "fabric-laworkspace"  # Default in main.tf

@@ -1,0 +1,17 @@
+# Core authentication and Azure libraries
+msal>=1.24.0
+requests>=2.31.0
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0
+azure-mgmt-monitor>=6.0.2
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Data processing (if needed)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional: Fabric-specific packages (install in Fabric runtime)
+# semantic-link-sempy  # Only available in Fabric runtime
+# notebookutils       # Only available in Fabric runtime

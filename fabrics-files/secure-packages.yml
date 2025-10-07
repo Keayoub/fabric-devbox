@@ -1,0 +1,5 @@
+dependencies:
+  - pip
+  - pip:
+    - pvw-cli>=1.0.9
+    - --index-url https://fabricdemos8659.z20.web.core.windows.net/simple
