@@ -1,5 +1,7 @@
 # Connecting Azure Machine Learning to Microsoft Fabric OneLake
 
+## Last updated: 2025-10-07
+
 Short, practical guidance and copy-paste examples for reading from and writing to OneLake from Azure Machine Learning (or local/dev environments). Focus is on two patterns, authentication, encoding pitfalls, networking (OAP), and a small checklist to get you started.
 
 ## TL;DR (answer in 30 seconds)
@@ -39,7 +41,7 @@ If you want a full narrative, examples, and a LinkedIn post, see the companion `
 - Cons: feature/preview differences between regions; sometimes full azureml:// URIs are required on compute.
 - When to use: primarily run in Azure ML and you want a single authoritative datastore config.
 
-2) Direct SDK access (DataLake/Blob SDKs)
+1) Direct SDK access (DataLake/Blob SDKs)
 
 - What: use DataLakeServiceClient or BlobServiceClient directly from notebooks or jobs.
 - Pros: works everywhere (local dev, Azure ML, Fabric compute), easier to debug locally, no datastore preview dependency.
