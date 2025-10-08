@@ -1,0 +1,19 @@
+{
+  "id": "sample-pipeline-1",
+  "displayName": "Sample Data Pipeline",
+  "type": "DataPipeline",
+  "properties": {
+    "description": "A minimal sample pipeline used for testing the create_fabric_pipeline tool.",
+    "activities": [
+      {
+        "id": "activity1",
+        "name": "DummyActivity",
+        "type": "ExecuteNotebook",
+        "properties": {
+          "notebookPath": "notebooks/validate_environment.ipynb",
+          "parameters": {}
+        }
+      }
+    ]
+  }
+}

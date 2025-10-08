@@ -1,0 +1,14 @@
+{
+  "displayName": "Sample ETL Dataflow",
+  "description": "A sample Dataflow Gen2 for testing the create_fabric_dataflow_gen2 tool",
+  "type": "Dataflow",
+  "definition": {
+    "parts": [
+      {
+        "path": "dataflow.json",
+        "payload": "ewogICJxdWVyaWVzIjogWwogICAgewogICAgICAibmFtZSI6ICJTb3VyY2VRdWVyeSIsCiAgICAgICJleHByZXNzaW9uIjogImxldFxuICAgIFNvdXJjZSA9IFdlYi5Db250ZW50cyhcImh0dHBzOi8vZXhhbXBsZS5jb20vZGF0YS5jc3ZcIiksXG4gICAgSW1wb3J0ZWRDU1YgPSBDc3YuRG9jdW1lbnQoU291cmNlLFt0cnVlXSlcbmluXG4gICAgSW1wb3J0ZWRDU1YiCiAgICB9CiAgXSwKICAiZGVzdGluYXRpb25zIjogW10KfQ==",
+        "payloadType": "InlineBase64"
+      }
+    ]
+  }
+}
